@@ -1,6 +1,6 @@
-import AppNavbar from "./components/Navbar";
-import Dashboard from "./components/Dashboard";
-import ContactForm from "./components/ContactForm";
+import AppNavbar from "./componnets/Navbar";
+import Dashboard from "./componnets/Dashboard";
+import ContactForm from "./componnets/ContactForm";
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
 return (
