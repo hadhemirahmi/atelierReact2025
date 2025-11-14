@@ -1,50 +1,23 @@
-import {RouterProvider,createBrowserRouter,Outlet } from "react-router-dom";
-import LoginRegister from "./componnets/login";
-import { useState } from "react";
-import Home from "./componnets/Home";
-import About from "./componnets/About"
-import Contact from "./componnets/Contact";
-import Service from "./componnets/Service";
-import Navbar from "./componnets/Navbar";
-import ProtectedRoute from "./ProtectedRoute";
-function Layout() {
+import AppNavbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
+import ContactForm from "./components/ContactForm";
+import 'bootstrap/dist/css/bootstrap.min.css';
+export default function App() {
 return (
-<>
-<Navbar />
-<main style={{ minHeight: "100vh", marginTop: "1rem" }}>
-<Outlet />
-</main>
-</>
-)
-}
-function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const[redirectPath,setRedirectPath]=useState("/services");
-    const handleLogin = () => {
-        setIsAuthenticated(true);
-    };
-    const handleLogout = () => {
-        setIsAuthenticated(false);
-    };
-    const router=createBrowserRouter([{
-path: '/',
-element: <Layout handleLogout={handleLogout}
-isAuthenticated={isAuthenticated} />,
-children: [
-{ index: true, element: <Home /> },
-{ path: 'about', element: <About /> },
-{ path: 'login', element: <LoginRegister onLogin={handleLogin}
-redirectPath={redirectPath} /> },
-{ path: 'contact', element: <Contact /> },
-{ path: 'services', element: <ProtectedRoute
-isAuthenticated={isAuthenticated} element={<Service/> }
-path={setRedirectPath} /> }
-]
-}])
-return (
-<>
-<RouterProvider router={router} />
-</>
+<div>
+<AppNavbar />
+<section id="home" className="text-center mt-6 p-10 bg-gray-100">
+
+<h1 className="text-4xl font-bold">Bienvenue sur l'application multi-
+CSS</h1>
+
+<p className="mt-4 text-lg">Une application React utilisant plusieurs
+frameworks CSS</p>
+</section>
+<Dashboard />
+<section id="contact" className="mt-10 mb-10">
+<ContactForm />
+</section>
+</div>
 );
 }
-export default App;
