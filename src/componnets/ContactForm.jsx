@@ -17,11 +17,8 @@ Contactez-nous
 </Typography>
 <TextField fullWidth label="Nom" margin="normal" />
 <TextField fullWidth label="Email" margin="normal" />
-<TextField fullWidth label="Message" multiline rows={4} margin="normal"
-/>
-<Button variant="contained" color="primary" sx={{ mt: 2 }}>
-Envoyer
-</Button>
+<TextField fullWidth label="Message" multiline rows={4} margin="normal"/>
+<Button variant="contained" color="primary" sx={{ mt: 2 }}>Envoyer</Button>
 </Box>
 );
 }
