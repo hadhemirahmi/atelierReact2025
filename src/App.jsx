@@ -8,8 +8,11 @@ return (
 <AppNavbar />
 <section id="home" className="text-center mt-6 p-10 bg-gray-100">
 
-<h1 className="text-4xl font-bold">Bienvenue sur l'application multi-
+<h1 className="text-4xl font-bold">  Bienvenue sur l'application multi-
 CSS</h1>
+
+
+
 
 <p className="mt-4 text-lg">Une application React utilisant plusieurs
 frameworks CSS</p>
