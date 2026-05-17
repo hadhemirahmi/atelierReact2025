@@ -4,6 +4,8 @@ function ProtectedRoute({ isAuthenticated, children }) {
     if (!isAuthenticated) {
         navigate("/login");
     }
+
+    
     return children;
 }
 export default ProtectedRoute;
